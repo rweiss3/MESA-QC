@@ -655,6 +655,9 @@ plink --bfile MESA_CAU_autosome.geno0.01.sd --recode --out MESA_CAU_4lift
 #Note: No phenotypes present.
 #--recode ped to MESA_CAU_4lift.ped + MESA_CAU_4lift.map ... done.
 
+#run liftover script with new ped/mapfiles
+###With AFA population###
+
 python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/liftOverPlink.py --map MESA_AFA_4lift.map --out AFA_lifted --chain /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/hg18ToHg19.over.chain.gz
 #Converting MAP file to UCSC BED file...
 #SUCC:  map->bed succ
@@ -666,6 +669,73 @@ python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/liftOverPlink.py -
 #SUCC:  bed->map succ
 #cleaning up BED files...
 cut -f 4 AFA_lifted.bed.unlifted | sed "/^#/d" >> afa_to_exclude.txt
+
+plink --file MESA_AFA_4lift --exclude afa_to_exclude.txt --recode --out AFA_tolift
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to AFA_tolift.log.
+#Options in effect:
+#  --exclude afa_to_exclude.txt
+#  --file MESA_AFA_4lift
+#  --out AFA_tolift
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#.ped scan complete (for binary autoconversion).
+#Performing single-pass .bed write (800326 variants, 2561 people).
+#--file: AFA_tolift-temporary.bed + AFA_tolift-temporary.bim +
+#AFA_tolift-temporary.fam written.
+#800326 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#--exclude: 794902 variants remaining.
+#Warning: At least 2 duplicate IDs in --exclude file.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998824.
+#794902 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--recode ped to AFA_tolift.ped + AFA_tolift.map ... done.
+
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/liftOverPlink.py --map AFA_tolift.map --out AFA_lifted_use --chain home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/hg18ToHg19.over.chain.gz
+#Converting MAP file to UCSC BED file...
+#SUCC:  map->bed succ
+#Lifting BED file...
+#Reading liftover chains
+#Couldn't open home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/hg18ToHg19.over.chain.gz , No such file or directory
+#SUCC:  liftBed succ
+#Converting lifted BED file back to MAP...
+#SUCC:  bed->map succ
+#cleaning up BED files...
+
+plink --ped AFA_tolift.ped --map AFA_lifted_use.map --make-bed --out MESA_AFA_lifted_final
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_lifted_final.log.
+#Options in effect:
+#  --make-bed
+#  --map AFA_lifted_use.map
+#  --out MESA_AFA_lifted_final
+#  --ped AFA_tolift.ped
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#.ped scan complete (for binary autoconversion).
+#Performing single-pass .bed write (794902 variants, 2561 people).
+#--file: MESA_AFA_lifted_final-temporary.bed +
+#MESA_AFA_lifted_final-temporary.bim + MESA_AFA_lifted_final-temporary.fam
+#written.
+#794902 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998824.
+#794902 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_AFA_lifted_final.bed + MESA_AFA_lifted_final.bim +
+#MESA_AFA_lifted_final.fam ... done.
+
+
+###With HIS population###
 
 
 
