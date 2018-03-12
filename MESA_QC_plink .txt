@@ -440,10 +440,156 @@ plink --bfile MESA_CAU_autosome --extract MESA_CAU-autosome.prune.in --genome --
 #step 6.1 was repeated for individual populations
 #step 10.1 was completed in RStudio 
 
-#
+plink --bed MESA_AFA_autosome.bed~ --bim MESA_AFA_autosome.bim~ --fam MESA_AFA_autosome.fam~ --geno 0.01 --make-bed --out #MESA_AFA_autosome.geno0.01 
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_autosome.geno0.01.log.
+#Options in effect:
+  #--bed MESA_AFA_autosome.bed~
+  #--bim MESA_AFA_autosome.bim~
+  #--fam MESA_AFA_autosome.fam~
+ # --geno 0.01
+ # --make-bed
+ # --out MESA_AFA_autosome.geno0.01
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#819939 variants loaded from .bim file.
+#2588 people (1130 males, 1458 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1506 founders and 1082 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998347.
+#19613 variants removed due to missing genotype data (--geno).
+#800326 variants and 2588 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_AFA_autosome.geno0.01.bed + MESA_AFA_autosome.geno0.01.bim +
+#MESA_AFA_autosome.geno0.01.fam ... done.
+
+####USE MESA_AFA_autosome.geno0.01 for the rest of the steps in the workshop###
 
 
+plink --bed MESA_HIS_autosome.bed --bim MESA_HIS_autosome.bim --fam MESA_HIS_autosome.fam --geno 0.01 --make-bed --out MESA_HIS_autosome.geno0.01
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_autosome.geno0.01.log.
+#Options in effect:
+#  --bed MESA_HIS_autosome.bed
+#  --bim MESA_HIS_autosome.bim
+#  --fam MESA_HIS_autosome.fam
+#  --geno 0.01
+#  --make-bed
+#  --out MESA_HIS_autosome.geno0.01
 
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#819939 variants loaded from .bim file.
+#2174 people (993 males, 1181 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1190 founders and 984 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998575.
+#10388 variants removed due to missing genotype data (--geno).
+#809551 variants and 2174 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_HIS_autosome.geno0.01.bed + MESA_HIS_autosome.geno0.01.bim +
+#MESA_HIS_autosome.geno0.01.fam ... done.
+
+###USE MESA_HIS_autosome.geno0.01 for rest of the steps in the workshop###
+
+plink --bed MESA_CAU_autosome.bed --bim MESA_CAU_autosome.bim --fam MESA_CAU_autosome.fam --geno 0.01 --make-bed --out MESA_CAU_autosome.geno0.01
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_autosome.geno0.01.log.
+#Options in effect:
+ # --bed MESA_CAU_autosome.bed
+ # --bim MESA_CAU_autosome.bim
+ # --fam MESA_CAU_autosome.fam
+ # --geno 0.01
+ # --make-bed
+ # --out MESA_CAU_autosome.geno0.01
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#819939 variants loaded from .bim file.
+#2685 people (1285 males, 1400 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2629 founders and 56 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.999021.
+#6137 variants removed due to missing genotype data (--geno).
+#813802 variants and 2685 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_CAU_autosome.geno0.01.bed + MESA_CAU_autosome.geno0.01.bim +
+#MESA_CAU_autosome.geno0.01.fam ... done.
+
+###USE MESA_CAU_autosome.geno0.01 for the rest of the workshop###
+
+plink --bfile MESA_AFA_autosome.geno0.01 --remove AFA_outliers.txt --make-bed --out MESA_AFA_autosome.geno0.01.sd
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_autosome.geno0.01.sd.log.
+#Options in effect:
+ # --bfile MESA_AFA_autosome.geno0.01
+ # --make-bed
+ # --out MESA_AFA_autosome.geno0.01.sd
+ # --remove AFA_outliers.txt
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#800326 variants loaded from .bim file.
+#2588 people (1130 males, 1458 females) loaded from .fam.
+#--remove: 2561 people remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate in remaining samples is 0.998825.
+#800326 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_AFA_autosome.geno0.01.sd.bed +
+#MESA_AFA_autosome.geno0.01.sd.bim + MESA_AFA_autosome.geno0.01.sd.fam ... done.
+
+plink --bfile MESA_HIS_autosome.geno0.01 --remove HIS_outliers.txt --make-bed --out MESA_HIS_autosome.geno0.01.sd
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_autosome.geno0.01.sd.log.
+#Options in effect:
+#  --bfile MESA_HIS_autosome.geno0.01
+#  --make-bed
+#  --out MESA_HIS_autosome.geno0.01.sd
+#  --remove HIS_outliers.txt
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#809551 variants loaded from .bim file.
+#2174 people (993 males, 1181 females) loaded from .fam.
+#--remove: 2157 people remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1184 founders and 973 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate in remaining samples is 0.998826.
+#809551 variants and 2157 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_HIS_autosome.geno0.01.sd.bed +
+#MESA_HIS_autosome.geno0.01.sd.bim + MESA_HIS_autosome.geno0.01.sd.fam ... done.
+
+plink --bfile MESA_CAU_autosome.geno0.01 --remove CAU_outliers.txt --make-bed --out MESA_CAU_autosome.geno0.01.sd
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_autosome.geno0.01.sd.log.
+#Options in effect:
+#  --bfile MESA_CAU_autosome.geno0.01
+#  --make-bed
+#  --out MESA_CAU_autosome.geno0.01.sd
+#  --remove CAU_outliers.txt
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#813802 variants loaded from .bim file.
+#2685 people (1285 males, 1400 females) loaded from .fam.
+#--remove: 2633 people remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2579 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate in remaining samples is 0.999246.
+#813802 variants and 2633 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_CAU_autosome.geno0.01.sd.bed +
+#MESA_CAU_autosome.geno0.01.sd.bim + MESA_CAU_autosome.geno0.01.sd.fam ... done.
 
 
 
