@@ -886,6 +886,210 @@ plink --ped CAU_tolift.ped --map CAU_lifted_use.map --make-bed --out MESA_CAU_li
 #--make-bed to MESA_CAU_lifted_final.bed + MESA_CAU_lifted_final.bim +
 #MESA_CAU_lifted_final.fam ... done.
 
+plink --bfile MESA_AFA_lifted_final --indep-pairwise 50 5 0.3 --out MESA_AFA_merged_autosome.geno0.01.sd.prune
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_merged_autosome.geno0.01.sd.prune.log.
+#Options in effect:
+#  --bfile MESA_AFA_lifted_final
+#  --indep-pairwise 50 5 0.3
+#  --out MESA_AFA_merged_autosome.geno0.01.sd.prune
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#794902 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998824.
+#794902 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#Pruned 38995 variants from chromosome 1, leaving 26016.
+#Pruned 41028 variants from chromosome 2, leaving 26592.
+#Pruned 33348 variants from chromosome 3, leaving 22073.
+#Pruned 30345 variants from chromosome 4, leaving 20260.
+#Pruned 30951 variants from chromosome 5, leaving 20710.
+#Pruned 31181 variants from chromosome 6, leaving 20369.
+#Pruned 25509 variants from chromosome 7, leaving 17400.
+#Pruned 26881 variants from chromosome 8, leaving 17666.
+#Pruned 22706 variants from chromosome 9, leaving 15059.
+#Pruned 26714 variants from chromosome 10, leaving 17590.
+#Pruned 24845 variants from chromosome 11, leaving 15921.
+#Pruned 22976 variants from chromosome 12, leaving 15997.
+#Pruned 18526 variants from chromosome 13, leaving 12794.
+#Pruned 14845 variants from chromosome 14, leaving 10798.
+#Pruned 13390 variants from chromosome 15, leaving 10663.
+#Pruned 14394 variants from chromosome 16, leaving 11111.
+#Pruned 9862 variants from chromosome 17, leaving 9056.
+#Pruned 13875 variants from chromosome 18, leaving 10391.
+#Pruned 5406 variants from chromosome 19, leaving 5434.
+#Pruned 12071 variants from chromosome 20, leaving 9121.
+#Pruned 6441 variants from chromosome 21, leaving 5048.
+#Pruned 5418 variants from chromosome 22, leaving 5126.
+#Pruning complete.  469707 of 794902 variants removed.
+#Marker lists written to MESA_AFA_merged_autosome.geno0.01.sd.prune.prune.in and
+#MESA_AFA_merged_autosome.geno0.01.sd.prune.prune.out .
+
+plink --bfile MESA_HIS_lifted_final --indep-pairwise 50 5 0.3 --out MESA_HIS_merged_autosome.geno0.01.sd.prune
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_merged_autosome.geno0.01.sd.prune.log.
+#Options in effect:
+#  --bfile MESA_HIS_lifted_final
+#  --indep-pairwise 50 5 0.3
+#  --out MESA_HIS_merged_autosome.geno0.01.sd.prune
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#794902 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998824.
+#794902 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#Pruned 38995 variants from chromosome 1, leaving 26016.
+#Pruned 41028 variants from chromosome 2, leaving 26592.
+#Pruned 33348 variants from chromosome 3, leaving 22073.
+#Pruned 30345 variants from chromosome 4, leaving 20260.
+#Pruned 30951 variants from chromosome 5, leaving 20710.
+#Pruned 31181 variants from chromosome 6, leaving 20369.
+#Pruned 25509 variants from chromosome 7, leaving 17400.
+#Pruned 26881 variants from chromosome 8, leaving 17666.
+#Pruned 22706 variants from chromosome 9, leaving 15059.
+#Pruned 26714 variants from chromosome 10, leaving 17590.
+#Pruned 24845 variants from chromosome 11, leaving 15921.
+#Pruned 22976 variants from chromosome 12, leaving 15997.
+#Pruned 18526 variants from chromosome 13, leaving 12794.
+#Pruned 14845 variants from chromosome 14, leaving 10798.
+#Pruned 13390 variants from chromosome 15, leaving 10663.
+#Pruned 14394 variants from chromosome 16, leaving 11111.
+#Pruned 9862 variants from chromosome 17, leaving 9056.
+#Pruned 13875 variants from chromosome 18, leaving 10391.
+#Pruned 5406 variants from chromosome 19, leaving 5434.
+#Pruned 12071 variants from chromosome 20, leaving 9121.
+#Pruned 6441 variants from chromosome 21, leaving 5048.
+#Pruned 5418 variants from chromosome 22, leaving 5126.
+#Pruning complete.  469707 of 794902 variants removed.
+#Marker lists written to MESA_HIS_merged_autosome.geno0.01.sd.prune.prune.in and
+#MESA_HIS_merged_autosome.geno0.01.sd.prune.prune.out .
+
+plink --bfile MESA_CAU_lifted_final --indep-pairwise 50 5 0.3 --out MESA_CAU_merged_autosome.geno0.01.sd.prune
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_merged_autosome.geno0.01.sd.prune.log.
+#Options in effect:
+#  --bfile MESA_CAU_lifted_final
+#  --indep-pairwise 50 5 0.3
+#  --out MESA_CAU_merged_autosome.geno0.01.sd.prune
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#808302 variants loaded from .bim file.
+#2633 people (1268 males, 1365 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2579 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.999247.
+#808302 variants and 2633 people pass filters and QC.
+#Note: No phenotypes present.
+#Pruned 47984 variants from chromosome 1, leaving 18027.
+#Pruned 50777 variants from chromosome 2, leaving 17998.
+#Pruned 41333 variants from chromosome 3, leaving 15076.
+#Pruned 37854 variants from chromosome 4, leaving 13841.
+#Pruned 38641 variants from chromosome 5, leaving 13914.
+#Pruned 38536 variants from chromosome 6, leaving 13893.
+#Pruned 31936 variants from chromosome 7, leaving 11778.
+#Pruned 33726 variants from chromosome 8, leaving 11646.
+#Pruned 28105 variants from chromosome 9, leaving 10390.
+#Pruned 32819 variants from chromosome 10, leaving 12149.
+#Pruned 30599 variants from chromosome 11, leaving 10877.
+#Pruned 28582 variants from chromosome 12, leaving 10980.
+#Pruned 23120 variants from chromosome 13, leaving 8773.
+#Pruned 18607 variants from chromosome 14, leaving 7459.
+#Pruned 17279 variants from chromosome 15, leaving 7133.
+#Pruned 18151 variants from chromosome 16, leaving 7699.
+#Pruned 12821 variants from chromosome 17, leaving 6335.
+#Pruned 17503 variants from chromosome 18, leaving 7186.
+#Pruned 6933 variants from chromosome 19, leaving 4066.
+#Pruned 15089 variants from chromosome 20, leaving 6357.
+#Pruned 8281 variants from chromosome 21, leaving 3400.
+#Pruned 7135 variants from chromosome 22, leaving 3514.
+#Pruning complete.  585811 of 808302 variants removed.
+#Marker lists written to MESA_CAU_merged_autosome.geno0.01.sd.prune.prune.in and
+#MESA_CAU_merged_autosome.geno0.01.sd.prune.prune.out .
+
+plink --bfile MESA_AFA_lifted_final --extract MESA_AFA_merged_autosome.geno0.01.sd.prune.prune.in --out MESA_AFA_merged_autosome.geno0.01.sd.4pca --make-bed
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_merged_autosome.geno0.01.sd.4pca.log.
+#Options in effect:
+#  --bfile MESA_AFA_lifted_final
+#  --extract MESA_AFA_merged_autosome.geno0.01.sd.prune.prune.in
+#  --make-bed
+#  --out MESA_AFA_merged_autosome.geno0.01.sd.4pca
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#794902 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#--extract: 325996 variants remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998799.
+#325996 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_AFA_merged_autosome.geno0.01.sd.4pca.bed +
+#MESA_AFA_merged_autosome.geno0.01.sd.4pca.bim +
+#MESA_AFA_merged_autosome.geno0.01.sd.4pca.fam ... done.
+
+plink --bfile MESA_HIS_lifted_final --extract MESA_HIS_merged_autosome.geno0.01.sd.prune.prune.in --out MESA_HIS_merged_autosome.geno0.01.sd.4pca --make-bed
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_merged_autosome.geno0.01.sd.4pca.log.
+#Options in effect:
+#  --bfile MESA_HIS_lifted_final
+#  --extract MESA_HIS_merged_autosome.geno0.01.sd.prune.prune.in
+# --make-bed
+#  --out MESA_HIS_merged_autosome.geno0.01.sd.4pca
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#794902 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#--extract: 325996 variants remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998799.
+#325996 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_HIS_merged_autosome.geno0.01.sd.4pca.bed +
+#MESA_HIS_merged_autosome.geno0.01.sd.4pca.bim +
+#MESA_HIS_merged_autosome.geno0.01.sd.4pca.fam ... done.
+
+plink --bfile MESA_CAU_lifted_final --extract MESA_CAU_merged_autosome.geno0.01.sd.prune.prune.in --out MESA_CAU_merged_autosome.geno0.01.sd.4pca --make-bed
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_merged_autosome.geno0.01.sd.4pca.log.
+#Options in effect:
+#  --bfile MESA_CAU_lifted_final
+#  --extract MESA_CAU_merged_autosome.geno0.01.sd.prune.prune.in
+#  --make-bed
+#  --out MESA_CAU_merged_autosome.geno0.01.sd.4pca
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#808302 variants loaded from .bim file.
+#2633 people (1268 males, 1365 females) loaded from .fam.
+#--extract: 222948 variants remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2579 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.999036.
+#222948 variants and 2633 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_CAU_merged_autosome.geno0.01.sd.4pca.bed +
+#MESA_CAU_merged_autosome.geno0.01.sd.4pca.bim +
+#MESA_CAU_merged_autosome.geno0.01.sd.4pca.fam ... done.
+
 
 
 
