@@ -1372,5 +1372,78 @@ plink --bfile MESA_CAU_merged_autosome.geno0.01.sd.4pca --recode --out MESA_CAU_
 #--recode ped to MESA_CAU_autosome.geno0.01.sd.4pca.ped +
 #MESA_CAU_autosome.geno0.01.sd.4pca.map ... done.
 
+##merged with hapmap hg19##
+###WITH AFA population###
+plink --bfile MESA_AFA_mergedHAPMAP --recode --out MESA_AFA_merged_hapmap.4pca
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_merged_hapmap.4pca.log.
+#Options in effect:
+#  --bfile MESA_AFA_mergedHAPMAP
+#  --out MESA_AFA_merged_hapmap.4pca
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#1496974 variants loaded from .bim file.
+#2952 people (1321 males, 1631 females) loaded from .fam.
+#391 phenotype values loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1887 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.217734.
+#1496974 variants and 2952 people pass filters and QC.
+#Among remaining phenotypes, 0 are cases and 391 are controls.  (2561 phenotypes
+#are missing.)
+#--recode ped to MESA_AFA_merged_hapmap.4pca.ped +
+#MESA_AFA_merged_hapmap.4pca.map ... done.
+
+###WITH HIS population###
+plink --bfile MESA_HIS_mergedHAPMAP --recode --out MESA_HIS_merged_hapmap.4pca
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_merged_hapmap.4pca.log.
+#Options in effect:
+#  --bfile MESA_HIS_mergedHAPMAP
+#  --out MESA_HIS_merged_hapmap.4pca
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#1496974 variants loaded from .bim file.
+#2952 people (1321 males, 1631 females) loaded from .fam.
+#391 phenotype values loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1887 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.217734.
+#1496974 variants and 2952 people pass filters and QC.
+#Among remaining phenotypes, 0 are cases and 391 are controls.  (2561 phenotypes
+#are missing.)
+#--recode ped to MESA_HIS_merged_hapmap.4pca.ped +
+#MESA_HIS_merged_hapmap.4pca.map ... done.
+
+###WITH CAU population###
+plink --bfile MESA_CAU_mergedHAPMAP --recode --out MESA_CAU_merged_hapmap.4pca
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_merged_hapmap.4pca.log.
+#Options in effect:
+#  --bfile MESA_CAU_mergedHAPMAP
+#  --out MESA_CAU_merged_hapmap.4pca
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+
+#1481402 variants loaded from .bim file.
+#3024 people (1465 males, 1559 females) loaded from .fam.
+#391 phenotype values loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2970 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.182912.
+#1481402 variants and 3024 people pass filters and QC.
+#Among remaining phenotypes, 0 are cases and 391 are controls.  (2633 phenotypes
+#are missing.)
+#--recode ped to MESA_CAU_merged_hapmap.4pca.ped +
+#MESA_CAU_merged_hapmap.4pca.map ... done.
 
 
