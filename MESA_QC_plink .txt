@@ -1091,7 +1091,286 @@ plink --bfile MESA_CAU_lifted_final --extract MESA_CAU_merged_autosome.geno0.01.
 #MESA_CAU_merged_autosome.geno0.01.sd.4pca.fam ... done.
 
 
+###WITH AFA population###
+plink --bfile MESA_AFA_merged_autosome.geno0.01.sd.4pca --exclude MESA_AFA_mergedHAPMAP-merge.missnp --make-bed --out MESA_AFA_4hapmerge
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_4hapmerge.log.
+#Options in effect:
+#  --bfile MESA_AFA_merged_autosome.geno0.01.sd.4pca
+#  --exclude MESA_AFA_mergedHAPMAP-merge.missnp
+#  --make-bed
+#  --out MESA_AFA_4hapmerge
 
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#325996 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#--exclude: 187894 variants remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998792.
+#187894 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_AFA_4hapmerge.bed + MESA_AFA_4hapmerge.bim +
+#MESA_AFA_4hapmerge.fam ... done.
+
+plink --bfile MESA_AFA_4hapmerge --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --make-bed --out MESA_AFA_mergedHAPMAP
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_mergedHAPMAP.log.
+#Options in effect:
+#  --bfile MESA_AFA_4hapmerge
+#  --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig
+#  --make-bed
+#  --out MESA_AFA_mergedHAPMAP
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#2561 people loaded from MESA_AFA_4hapmerge.fam.
+#391 people to be merged from
+#/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam.
+#Of these, 391 are new, while 0 are present in the base dataset.
+#Warning: Multiple positions seen for variant 'rs4362999'.
+#Warning: Multiple positions seen for variant 'rs9719092'.
+#Warning: Multiple positions seen for variant 'rs6958838'.
+
+#187411 markers loaded from MESA_AFA_4hapmerge.bim.
+#1447224 markers to be merged from
+#/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim.
+#Of these, 1309563 are new, while 137661 are present in the base dataset.
+#17 more multiple-position warnings: see log file.
+#Warning: Variants 'rs7555212' and 'AFFX-SNP_6564577__rs7555212' have the same
+#position.
+#Warning: Variants 'rs10915322' and 'AFFX-SNP_6869948__rs10915322' have the same
+#position.
+#Warning: Variants 'rs9439505' and 'AFFX-SNP_4600__rs9439505' have the same
+#position.
+#2554 more same-position warnings: see log file.
+#Performing single-pass merge (2952 people, 1496974 variants).
+#Merged fileset written to MESA_AFA_mergedHAPMAP-merge.bed +
+#MESA_AFA_mergedHAPMAP-merge.bim + MESA_AFA_mergedHAPMAP-merge.fam .
+#1496974 variants loaded from .bim file.
+#2952 people (1321 males, 1631 females) loaded from .fam.
+#391 phenotype values loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1887 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.217734.
+#1496974 variants and 2952 people pass filters and QC.
+#Among remaining phenotypes, 0 are cases and 391 are controls.  (2561 phenotypes
+#are missing.)
+#--make-bed to MESA_AFA_mergedHAPMAP.bed + MESA_AFA_mergedHAPMAP.bim +
+#MESA_AFA_mergedHAPMAP.fam ... done.
+
+###WITH HIS population###
+plink --bfile MESA_HIS_merged_autosome.geno0.01.sd.4pca --exclude MESA_HIS_mergedHAPMAP-merge.missnp --make-bed --out MESA_HIS_4hapmerge
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_4hapmerge.log.
+#Options in effect:
+#  --bfile MESA_HIS_merged_autosome.geno0.01.sd.4pca
+#  --exclude MESA_HIS_mergedHAPMAP-merge.missnp
+#  --make-bed
+#  --out MESA_HIS_4hapmerge
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#325996 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#--exclude: 187894 variants remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998792.
+#187894 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_HIS_4hapmerge.bed + MESA_HIS_4hapmerge.bim +
+#MESA_HIS_4hapmerge.fam ... done.
+plink --bfile MESA_HIS_4hapmerge --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --make-bed --out MESA_HIS_mergedHAPMAP
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_mergedHAPMAP.log.
+#Options in effect:
+#  --bfile MESA_HIS_4hapmerge
+#  --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig
+#  --make-bed
+#  --out MESA_HIS_mergedHAPMAP
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#2561 people loaded from MESA_HIS_4hapmerge.fam.
+#391 people to be merged from
+#/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam.
+#Of these, 391 are new, while 0 are present in the base dataset.
+#Warning: Multiple positions seen for variant 'rs4362999'.
+#Warning: Multiple positions seen for variant 'rs9719092'.
+#Warning: Multiple positions seen for variant 'rs6958838'.
+#187411 markers loaded from MESA_HIS_4hapmerge.bim.
+#1447224 markers to be merged from
+#/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim.
+#Of these, 1309563 are new, while 137661 are present in the base dataset.
+#17 more multiple-position warnings: see log file.
+#Warning: Variants 'rs7555212' and 'AFFX-SNP_6564577__rs7555212' have the same
+#position.
+#Warning: Variants 'rs10915322' and 'AFFX-SNP_6869948__rs10915322' have the same
+#position.
+#Warning: Variants 'rs9439505' and 'AFFX-SNP_4600__rs9439505' have the same
+#position.
+#2554 more same-position warnings: see log file.
+#Performing single-pass merge (2952 people, 1496974 variants).
+#Merged fileset written to MESA_HIS_mergedHAPMAP-merge.bed +
+#MESA_HIS_mergedHAPMAP-merge.bim + MESA_HIS_mergedHAPMAP-merge.fam .
+#1496974 variants loaded from .bim file.
+#2952 people (1321 males, 1631 females) loaded from .fam.
+#391 phenotype values loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1887 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.217734.
+#1496974 variants and 2952 people pass filters and QC.
+#Among remaining phenotypes, 0 are cases and 391 are controls.  (2561 phenotypes
+#are missing.)
+#--make-bed to MESA_HIS_mergedHAPMAP.bed + MESA_HIS_mergedHAPMAP.bim +
+#MESA_HIS_mergedHAPMAP.fam ... done.
+
+
+###WITH CAU population###
+plink --bfile MESA_CAU_merged_autosome.geno0.01.sd.4pca --exclude MESA_CAU_mergedHAPMAP-merge.missnp --make-bed --out MESA_CAU_4hapmerge
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_4hapmerge.log.
+#Options in effect:
+#  --bfile MESA_CAU_merged_autosome.geno0.01.sd.4pca
+#  --exclude MESA_CAU_mergedHAPMAP-merge.missnp
+#  --make-bed
+#  --out MESA_CAU_4hapmerge
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#222948 variants loaded from .bim file.
+#2633 people (1268 males, 1365 females) loaded from .fam.
+#--exclude: 128236 variants remaining.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2579 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.999027.
+#128236 variants and 2633 people pass filters and QC.
+#Note: No phenotypes present.
+#--make-bed to MESA_CAU_4hapmerge.bed + MESA_CAU_4hapmerge.bim +
+#MESA_CAU_4hapmerge.fam ... done.
+plink --bfile MESA_CAU_4hapmerge --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --make-bed --out MESA_CAU_mergedHAPMAP
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_mergedHAPMAP.log.
+#Options in effect:
+#  --bfile MESA_CAU_4hapmerge
+#  --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig
+#  --make-bed
+#  --out MESA_CAU_mergedHAPMAP
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#2633 people loaded from MESA_CAU_4hapmerge.fam.
+#391 people to be merged from
+#/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam.
+#Of these, 391 are new, while 0 are present in the base dataset.
+#Warning: Multiple positions seen for variant 'rs13389374'.
+#Warning: Multiple positions seen for variant 'rs9719092'.
+#Warning: Multiple positions seen for variant 'rs6958838'.
+#127964 markers loaded from MESA_CAU_4hapmerge.bim.
+#1447224 markers to be merged from
+#/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim.
+#Of these, 1353438 are new, while 93786 are present in the base dataset.
+#14 more multiple-position warnings: see log file.
+#Warning: Variants 'rs7555212' and 'AFFX-SNP_6564577__rs7555212' have the same
+#position.
+#Warning: Variants 'rs10915322' and 'AFFX-SNP_6869948__rs10915322' have the same
+#position.
+#Warning: Variants 'rs9439505' and 'AFFX-SNP_4600__rs9439505' have the same
+#position.
+#2521 more same-position warnings: see log file.
+#Performing single-pass merge (3024 people, 1481402 variants).
+#Merged fileset written to MESA_CAU_mergedHAPMAP-merge.bed +
+#MESA_CAU_mergedHAPMAP-merge.bim + MESA_CAU_mergedHAPMAP-merge.fam .
+#1481402 variants loaded from .bim file.
+#3024 people (1465 males, 1559 females) loaded from .fam.
+#391 phenotype values loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2970 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.182912.
+#1481402 variants and 3024 people pass filters and QC.
+#Among remaining phenotypes, 0 are cases and 391 are controls.  (2633 phenotypes
+#are missing.)
+#--make-bed to MESA_CAU_mergedHAPMAP.bed + MESA_CAU_mergedHAPMAP.bim +
+#MESA_CAU_mergedHAPMAP.fam ... done.
+
+#step 16 was completed#
+
+#Make ped/map files for PCA
+###WITH AFA popluation###
+plink --bfile MESA_AFA_merged_autosome.geno0.01.sd.4pca --recode --out MESA_AFA_autosome.geno0.01.sd.4pca
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_AFA_autosome.geno0.01.sd.4pca.log.
+#Options in effect:
+#  --bfile MESA_AFA_merged_autosome.geno0.01.sd.4pca
+#  --out MESA_AFA_autosome.geno0.01.sd.4pca
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#325996 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.998799.
+#325996 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--recode ped to MESA_AFA_autosome.geno0.01.sd.4pca.ped +
+
+#MESA_AFA_autosome.geno0.01.sd.4pca.map ... done.
+
+###WITH HIS population###
+plink --bfile MESA_HIS_merged_autosome.geno0.01.sd.4pca --recode --out MESA_HIS_autosome.geno0.01.sd.4pca
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_HIS_autosome.geno0.01.sd.4pca.log.
+#Options in effect:
+#  --bfile MESA_HIS_merged_autosome.geno0.01.sd.4pca
+#  --out MESA_HIS_autosome.geno0.01.sd.4pca
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#325996 variants loaded from .bim file.
+#2561 people (1124 males, 1437 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 1496 founders and 1065 nonfounders present.
+#Calculating allele frequencies... 93%
+# done.
+#Total genotyping rate is 0.998799.
+#325996 variants and 2561 people pass filters and QC.
+#Note: No phenotypes present.
+#--recode ped to MESA_HIS_autosome.geno0.01.sd.4pca.ped +
+#MESA_HIS_autosome.geno0.01.sd.4pca.map ... done.
+
+###WITH CAU population###
+plink --bfile MESA_CAU_merged_autosome.geno0.01.sd.4pca --recode --out MESA_CAU_autosome.geno0.01.sd.4pca
+#PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
+#(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
+#Logging to MESA_CAU_autosome.geno0.01.sd.4pca.log.
+#Options in effect:
+#  --bfile MESA_CAU_merged_autosome.geno0.01.sd.4pca
+#  --out MESA_CAU_autosome.geno0.01.sd.4pca
+#  --recode
+
+#515882 MB RAM detected; reserving 257941 MB for main workspace.
+#222948 variants loaded from .bim file.
+#2633 people (1268 males, 1365 females) loaded from .fam.
+#Using 1 thread (no multithreaded calculations invoked).
+#Before main variant filters, 2579 founders and 54 nonfounders present.
+#Calculating allele frequencies... done.
+#Total genotyping rate is 0.999036.
+#222948 variants and 2633 people pass filters and QC.
+#Note: No phenotypes present.
+#--recode ped to MESA_CAU_autosome.geno0.01.sd.4pca.ped +
+#MESA_CAU_autosome.geno0.01.sd.4pca.map ... done.
 
 
 
