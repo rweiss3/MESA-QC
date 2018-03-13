@@ -1534,7 +1534,24 @@ nano AFA.par
 #numoutlieriter: 0
 #numoutlierevec: 2
 #outliersigmathresh: 6
-smartpca -p CAU.par (NEED TO RUN) 
+smartpca -p CAU.par 
+parameter file: CAU.par
+### THE INPUT PARAMETERS
+##PARAMETER NAME: VALUE
+#genotypename: /home/rachel/Plinkfiles/MESA_CAU_autosome.geno0.01.sd.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_CAU_autosome.geno0.01.sd.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_CAU_autosome.geno0.01.sd.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/CAU_pc.evec
+#evaloutname: /home/rachel/Plinkfiles/CAU_pc.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+## smartpca version: 13050
+#norm used
+
+#genetic distance set from physical distance
+#NEED TO RUN AGAIN########
 
 
 
