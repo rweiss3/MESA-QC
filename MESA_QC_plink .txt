@@ -1447,3 +1447,144 @@ plink --bfile MESA_CAU_mergedHAPMAP --recode --out MESA_CAU_merged_hapmap.4pca
 #MESA_CAU_merged_hapmap.4pca.map ... done.
 
 
+
+###make .par file for PCA###
+#WITH AFA not merged###
+#nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/MESA_AFA_autosome.geno0.01.sd.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_AFA_autosome.geno0.01.sd.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_AFA_autosome.geno0.01.sd.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/AFA_pc.evec
+#evaloutname: /home/rachel/Plinkfiles/AFA_pc.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+smartpca -p AFA.par
+#parameter file: AFA.par
+### THE INPUT PARAMETERS
+##PARAMETER NAME: VALUE
+#genotypename: /home/rachel/Plinkfiles/MESA_AFA_autosome.geno0.01.sd.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_AFA_autosome.geno0.01.sd.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_AFA_autosome.geno0.01.sd.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/AFA_pc.evec
+#evaloutname: /home/rachel/Plinkfiles/AFA_pc.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+## smartpca version: 13050
+#norm used
+
+#genetic distance set from physical distance
+#genotype file processed
+#number of samples used: 2561 number of snps used: 325996
+#Using 71 threads, and partial sum lookup algorithm.
+#total number of snps killed in pass: 0  used: 325996
+## To get Tracy-Widom statistics: recompile smartpca with TWTAB correctly specified in Makefile, or
+   #just run twstats (see README file in POPGEN directory)
+
+   
+   
+###WITH HIS not merged###
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/MESA_HIS_autosome.geno0.01.sd.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_HIS_autosome.geno0.01.sd.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_HIS_autosome.geno0.01.sd.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/HIS_pc.evec
+#evaloutname: /home/rachel/Plinkfiles/HIS_pc.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+#control x --> YES --> keep file name--> rename 
+smartpca -p HIS.par
+#parameter file: HIS.par
+### THE INPUT PARAMETERS
+##PARAMETER NAME: VALUE
+#genotypename: /home/rachel/Plinkfiles/MESA_HIS_autosome.geno0.01.sd.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_HIS_autosome.geno0.01.sd.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_HIS_autosome.geno0.01.sd.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/HIS_pc.evec
+#evaloutname: /home/rachel/Plinkfiles/HIS_pc.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+## smartpca version: 13050
+#norm used
+#genetic distance set from physical distance
+#genotype file processed
+#number of samples used: 2561 number of snps used: 325996
+#Using 71 threads, and partial sum lookup algorithm.
+#total number of snps killed in pass: 0  used: 325996
+#To get Tracy-Widom statistics: recompile smartpca with TWTAB correctly specified in Makefile, or
+   #just run twstats (see README file in POPGEN directory)
+
+
+
+###WITH CAU not merged###
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/MESA_CAU_autosome.geno0.01.sd.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_CAU_autosome.geno0.01.sd.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_CAU_autosome.geno0.01.sd.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/CAU_pc.evec
+#evaloutname: /home/rachel/Plinkfiles/CAU_pc.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+smartpca -p CAU.par (NEED TO RUN) 
+
+
+
+####MERGED####
+###WITH AFA merged###
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/MESA_AFA_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/MESA_AFA_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_AFA_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/AFA_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/AFA_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> AFA_hapmap.par
+smartpca -p AFA_hapmap.par (NEED TO RUN) 
+
+###WITH HIS merged###
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/MESA_HIS_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/MESA_HIS_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_HIS_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/HIS_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/HIS_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> HIS_hapmap.par
+smartpca -p HIS_hapmap.par (NEED TO RUN) 
+
+
+###WITH CAU merged###
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/MESA_CAU_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/MESA_CAU_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_CAU_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/CAU_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/CAU_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> CAU_hapmap.par
+smartpca -p CAU_hapmap.par (NEED TO RUN) 
+
+
+
+
+
+
+
