@@ -1694,6 +1694,17 @@ smartpca -p CAU_hapmap.par (NEED TO RUN)
 
 ## To get Tracy-Widom statistics: recompile smartpca with TWTAB correctly specified in Makefile, or
   # just run twstats (see README file in POPGEN directory)
+#  kurtosis           snps    indivs
+# eigenvector    1     5.738    18.838
+# eigenvector    2     4.507    10.304
+# eigenvector    3    25.484     7.885
+# eigenvector    4     6.562    18.295
+# eigenvector    5    23.630  1584.180
+# eigenvector    6    14.392   100.154
+# eigenvector    7    14.749   105.569
+# eigenvector    8    14.712   143.327
+# eigenvector    9    14.094    96.341
+# eigenvector   10    13.939    90.246
 
 
 
