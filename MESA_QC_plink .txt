@@ -1568,7 +1568,40 @@ nano AFA.par
 #numoutlierevec: 2
 #outliersigmathresh: 6 
 #control x --> yes --> keep file name --> AFA_hapmap.par
-smartpca -p AFA_hapmap.par (NEED TO RUN) 
+smartpca -p AFA_hapmap.par 
+parameter file: AFA_hapmap.par
+### THE INPUT PARAMETERS
+##PARAMETER NAME: VALUE
+#genotypename: /home/rachel/Plinkfiles/MESA_AFA_merged_hapmap.4pca.ped
+#snpname: /home/rachel/Plinkfiles/MESA_AFA_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/MESA_AFA_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/AFA_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/AFA_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6
+## smartpca version: 13050
+#norm used
+
+#genetic distance set from physical distance
+#genotype file processed
+#number of samples used: 2952 number of snps used: 1496974
+#Using 71 threads, and partial sum lookup algorithm.
+# snp            rs7412024 ignored . allelecnt:     0  missing:  2841
+# snp           rs11204716 ignored . allelecnt:     0  missing:  2842
+# snp           rs12138182 ignored . allelecnt:     0  missing:  2846
+# snp            rs7542473 ignored . allelecnt:     0  missing:  2842
+# snp             rs330716 ignored . allelecnt:     0  missing:  2842
+# snp            rs2710160 ignored . allelecnt:     0  missing:  2842
+# snp           rs28382907 ignored . allelecnt:     0  missing:  2842
+# snp           rs10200737 ignored . allelecnt:     0  missing:  2843
+# snp           rs13410111 ignored . allelecnt:     0  missing:  2842
+# snp           rs13085502 ignored . allelecnt:     0  missing:  2841
+#total number of snps killed in pass: 62  used: 1496912
+
+## To get Tracy-Widom statistics: recompile smartpca with TWTAB correctly specified in Makefile, or
+   just run twstats (see README file in POPGEN directory)
 
 ###WITH HIS merged###
 nano AFA.par
