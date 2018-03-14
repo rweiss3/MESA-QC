@@ -1551,6 +1551,9 @@ parameter file: CAU.par
 #norm used
 
 #genetic distance set from physical distance
+#fatalx:
+#(putgtypes)
+#Aborted
 #NEED TO RUN AGAIN########
 
 
