@@ -709,6 +709,9 @@ plink --file mesa_cau_use --make-bed --out MESA_CAU_lifted_final
 
 
 
+
+
+
 START HERE
 ##filter by genotyping rate and maf (unmerged)##
 plink --bfile MESA_AFA_lifted_final --geno 0.05 --maf 0.05 --make-bed   --out MESA_AFA_lifted_filt
