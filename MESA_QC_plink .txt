@@ -591,6 +591,7 @@ plink --bfile MESA_CAU_autosome.geno0.01 --remove CAU_outliers.txt --make-bed --
 #--make-bed to MESA_CAU_autosome.geno0.01.sd.bed +
 #MESA_CAU_autosome.geno0.01.sd.bim + MESA_CAU_autosome.geno0.01.sd.fam ... done.
 
+
 plink --bfile MESA_AFA_autosome.geno0.01.sd --recode --out MESA_AFA_4lift
 #PLINK v1.90b4.4 64-bit (21 May 2017)           www.cog-genomics.org/plink/1.9/
 #(C) 2005-2017 Shaun Purcell, Christopher Chang   GNU General Public License v3
@@ -657,6 +658,223 @@ plink --bfile MESA_CAU_autosome.geno0.01.sd --recode --out MESA_CAU_4lift
 
 #run liftover script with new ped/mapfiles
 ###With AFA population###
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m MESA_AFA_4lift.map -p MESA_AFA_4lift.ped -o mesa_afa_new
+#SUCC:  map->bed succ
+#Reading liftover chains
+#Mapping coordinates
+#SUCC:  liftBed succ
+#SUCC:  bed->map succ
+
+plink --file MESA_AFA_4lift --exclude mesa_afa_new.bed.unlifted --recode --out AFA_tolift
+
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m AFA_tolift.map -p AFA_tolift.ped -o mesa_afa_use
+
+plink --file mesa_afa_use --make-bed --out MESA_AFA_lifted_final
+
+
+###WITH HIS population###
+
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m MESA_HIS_4lift.map -p MESA_HIS_4lift.ped -o mesa_his_new
+
+plink --file MESA_HIS_4lift --exclude mesa_his_new.bed.unlifted --recode --out HIS_tolift
+
+
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m HIS_tolift.map -p HIS_tolift.ped -o mesa_his_use
+
+
+plink --file mesa_his_use --make-bed --out MESA_HIS_lifted_final
+
+
+
+###WITH CAU population###
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m MESA_CAU_4lift.map -p MESA_CAU_4lift.ped -o mesa_cau_new
+
+plink --file MESA_CAU_4lift --exclude mesa_cau_new.bed.unlifted --recode --out CAU_tolift
+
+python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m CAU_tolift.map -p CAU_tolift.ped -o mesa_cau_use
+
+plink --file mesa_cau_use --make-bed --out MESA_CAU_lifted_final
+
+
+##filter by genotyping rate and maf (unmerged)##
+plink --bfile MESA_AFA_lifted_final --geno 0.05 --maf 0.05 --make-bed   --out MESA_AFA_lifted_filt
+
+plink --bfile MESA_HIS_lifted_final --geno 0.05 --maf 0.05 --make-bed  --out MESA_HIS_lifted_filt
+
+plink --bfile MESA_CAU_lifted_final--geno 0.05 --maf 0.05 --make-bed  --out MESA_CAU_lifted_filt
+
+
+##LD prune MESA files with removed individuals and make ped/map files (unmerged)
+plink --bfile MESA_AFA_lifted_filt --indep-pairwise 50 5 0.3 --recode  --out MESA_AFA_autosome.geno0.01.sd.pruned
+
+plink --bfile  MESA_HIS_lifted_filt --indep-pairwise 50 5 0.3 --recode --out MESA_HIS_autosome.geno0.01.sd.pruned
+
+plink --bfile MESA_CAU_lifted_filt --indep-pairwise 50 5 0.3 --recode --out MESA_CAU_autosome.geno0.01.sd.pruned
+
+
+##Merge pruned data with HAPMAP##
+###WITH AFA population###
+plink --bfile MESA_AFA_merged_autosome.geno0.01.sd.4pca --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bed  /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam --make-bed --out MESA_AFA_mergedHAPMAP
+
+plink --bfile /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --exclude MESA_AFA_mergedHAPMAP-merge.missnp --make-bed --out hapmap19use
+
+plink --bfile MESA_AFA_4hapmerge --bmerge hapmap19use.bed hapmap19use.bim hapmap19use.fam --make-bed --out MESA_AFA_mergedHAPMAP
+
+###WITH HIS population###
+plink --bfile MESA_HIS_merged_autosome.geno0.01.sd.4pca --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bed  /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam --make-bed --out MESA_HIS_mergedHAPMAP
+
+plink --bfile /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --exclude MESA_HIS_mergedHAPMAP-merge.missnp --make-bed --out hapmap19use
+
+plink --bfile MESA_HIS_4hapmerge --bmerge hapmap19use.bed hapmap19use.bim hapmap19use.fam --make-bed --out MESA_HIS_mergedHAPMAP
+
+
+###WITH CAU population###
+plink --bfile MESA_CAU_merged_autosome.geno0.01.sd.4pca --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bed  /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam --make-bed --out MESA_CAU_mergedHAPMAP
+
+plink --bfile /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --exclude MESA_CAU_mergedHAPMAP-merge.missnp --make-bed --out hapmap19use
+
+plink --bfile MESA_CAU_4hapmerge --bmerge hapmap19use.bed hapmap19use.bim hapmap19use.fam --make-bed --out MESA_CAU_mergedHAPMAP
+
+###filter by genotyping rate and maf (merged)
+###WITH AFA population 
+plink --bfile MESA_AFA_mergedHAPMAP --geno 0.05 --maf 0.05 --make-bed   --out MESA_AFA_mergedHAPMAP0.05
+
+###WITH HIS population 
+plink --bfile MESA_HIS_mergedHAPMAP --geno 0.05 --maf 0.05 --make-bed  --out MESA_HIS_mergedHAPMAP0.05
+
+###WITH CAU population 
+plink --bfile MESA_CAU_mergedHAPMAP--geno 0.05 --maf 0.05 --make-bed  --out MESA_CAU_mergedHAPMAP0.05
+
+###LD prune MESA files with removed individuals and make ped/map files (merged)
+###WITH AFA population 
+plink --bfile MESA_AFA_mergedHAPMAP0.05 --indep-pairwise 50 5 0.3 --recode  --out MESA_AFA_mergedHAPMAP0.05
+
+###WITH HIS population 
+plink --bfile  MESA_HIS_mergedHAPMAP0.05 --indep-pairwise 50 5 0.3 --recode --out MESA_HIS_mergedHAPMAP0.05
+
+
+###WITH CAU population 
+plink --bfile MESA_CAU_mergedHAPMAP0.05 --indep-pairwise 50 5 0.3 --recode --out MESA_CAU_mergedHAPMAP0.05
+
+
+#reformat fam file for PCA
+##unmerged
+awk '{print $1, $2, $3, $4, $5, 1}' MESA_AFA_lifted_filt.fam > MESA_AFA_autosome.geno0.01.sd.4pca.fam
+
+awk '{print $1, $2, $3, $4, $5, 1}' MESA_AFA_lifted_filt.fam > MESA_HIS_autosome.geno0.01.sd.4pca.fam
+
+awk '{print $1, $2, $3, $4, $5, 1}' MESA_AFA_lifted_filt.fam > MESA_CAU_autosome.geno0.01.sd.4pca.fam
+
+###merged with hapmap
+awk '{print $1, $2, $3, $4, $5, 1}' MESA_AFA_mergedHAPMAP0.05.fam > MESA_AFA_merged_hapmap.4pca.fam
+
+awk '{print $1, $2, $3, $4, $5, 1}' MESA_HIS_mergedHAPMAP0.05.fam > MESA_HIS_merged_hapmap.4pca.fam
+
+awk '{print $1, $2, $3, $4, $5, 1}' MESA_CAU_mergedHAPMAP0.05.fam > MESA_CAU_merged_hapmap.4pca.fam
+
+#19 MAKE .par FILE FOR PCA 
+###WITH AFA population not merged 
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> AFA_hapmap.par
+
+
+###WITH HIS population not merged 
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> HIS.par
+
+
+###WITH CAU population not merged 
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> CAU.par
+
+###WITH AFA population merged 
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> AFA_hapmap.par
+
+###WITH HIS population merged 
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> HIS_hapmap.par
+
+###WITH CAU population merged 
+nano AFA.par
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
+#evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.evec
+#evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.eval
+#numoutevec: 10
+#numoutlieriter: 0
+#numoutlierevec: 2
+#outliersigmathresh: 6 
+#control x --> yes --> keep file name --> CAU_hapmap.par
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/liftOverPlink.py --map MESA_AFA_4lift.map --out AFA_lifted --chain /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/hg18ToHg19.over.chain.gz
 #Converting MAP file to UCSC BED file...
