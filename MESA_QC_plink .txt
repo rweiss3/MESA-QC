@@ -1554,7 +1554,7 @@ parameter file: CAU.par
 #fatalx:
 #(putgtypes)
 #Aborted
-#NEED TO RUN AGAIN########
+#TO RUN AGAIN########
 
 
 
@@ -1663,7 +1663,7 @@ nano AFA.par
 #numoutlierevec: 2
 #outliersigmathresh: 6 
 #control x --> yes --> keep file name --> CAU_hapmap.par
-smartpca -p CAU_hapmap.par (NEED TO RUN) 
+smartpca -p CAU_hapmap.par 
 #parameter file: CAU_hapmap.par
 ### THE INPUT PARAMETERS
 ##PARAMETER NAME: VALUE
