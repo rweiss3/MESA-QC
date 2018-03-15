@@ -656,6 +656,14 @@ plink --bfile MESA_CAU_autosome.geno0.01.sd --recode --out MESA_CAU_4lift
 #Note: No phenotypes present.
 #--recode ped to MESA_CAU_4lift.ped + MESA_CAU_4lift.map ... done.
 
+
+
+
+
+
+
+
+
 #run liftover script with new ped/mapfiles
 ###With AFA population###
 python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m MESA_AFA_4lift.map -p MESA_AFA_4lift.ped -o mesa_afa_new
@@ -696,6 +704,12 @@ python /home/lauren/MESA_dbGaP_55081/all_mesa_merged/liftover/LiftMap.py -m CAU_
 plink --file mesa_cau_use --make-bed --out MESA_CAU_lifted_final
 
 
+
+
+
+
+
+START HERE
 ##filter by genotyping rate and maf (unmerged)##
 plink --bfile MESA_AFA_lifted_final --geno 0.05 --maf 0.05 --make-bed   --out MESA_AFA_lifted_filt
 
