@@ -731,7 +731,8 @@ plink --bfile MESA_CAU_lifted_filt --indep-pairwise 50 5 0.3 --recode --out MESA
 START HERE 
 ##Merge pruned data with HAPMAP##
 ###WITH AFA population###
-plink --bfile MESA_AFA_autosome.geno0.01.sd.4pca --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bed  /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam --make-bed --out MESA_AFA_mergedHAPMAP
+
+plink --bfile MESA_AFA_autosome.geno0.01.sd --bmerge /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bed  /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.bim /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig.fam --make-bed --out MESA_AFA_mergedHAPMAP
 
 plink --bfile /home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/HM3_ASN_CEU_YRI_Unrelated_hg19_noAmbig --exclude MESA_AFA_mergedHAPMAP-merge.missnp --make-bed --out hapmap19use
 
