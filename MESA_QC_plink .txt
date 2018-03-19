@@ -881,3 +881,14 @@ outliersigmathresh: 6
 #outliersigmathresh: 6 
 #control x --> yes --> keep file name --> CAU_hapmap.par
 
+
+#run PCA
+smartpca -p afa_autosome.par
+smartpca -p afa_hapmap.par 
+
+smartpca -p his_autosome.par
+smartpca -p his_hapmap.par
+
+smartpca -p cau_autosome.par
+smartpca -p cau_hapmap.par
+
