@@ -861,15 +861,6 @@ nano AFA.par
 
 ###WITH CAU population merged 
 nano AFA.par
-genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped                                                 
-snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
-evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.evec
-evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.eval
-numoutevec: 10
-numoutlieriter: 0
-numoutlierevec: 2
-outliersigmathresh: 6 
 #genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped                                                 
 #snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
 #indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
@@ -883,12 +874,12 @@ outliersigmathresh: 6
 
 
 #run PCA
-smartpca -p afa_autosome.par
-smartpca -p afa_hapmap.par 
+smartpca -p AFA.par
+smartpca -p AFA_hapmap.par 
 
-smartpca -p his_autosome.par
-smartpca -p his_hapmap.par
+smartpca -p HIS.par
+smartpca -p HIS_hapmap.par
 
-smartpca -p cau_autosome.par
-smartpca -p cau_hapmap.par
+smartpca -p CAU.par
+smartpca -p CAU_hapmap.par
 
