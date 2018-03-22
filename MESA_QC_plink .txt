@@ -794,9 +794,9 @@ awk '{print $1, $2, $3, $4, $5, 1}' MESA_CAU_mergedHAPMAP0.05.fam > MESA_CAU_mer
 #19 MAKE .par FILE FOR PCA 
 ###WITH AFA population not merged 
 nano AFA.par
-#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.ped                                                 
-#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.map
-#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.ped                                                
+#snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.fam
 #evecoutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.evec
 #evaloutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.eval
 #numoutevec: 10
@@ -808,9 +808,9 @@ nano AFA.par
 
 ###WITH HIS population not merged 
 nano AFA.par
-#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.ped                                                 
-#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.map
-#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_HIS_autosome.geno0.01.sd.pruned.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_HIS_autosome.geno0.01.sd.pruned.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/ MESA_HIS_autosome.geno0.01.sd.pruned.fam
 #evecoutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.evec
 #evaloutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.eval
 #numoutevec: 10
@@ -822,9 +822,9 @@ nano AFA.par
 
 ###WITH CAU population not merged 
 nano AFA.par
-#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped                                                 
-#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
-#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_CAU_autosome.geno0.01.sd.pruned.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_CAU_autosome.geno0.01.sd.pruned.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/ MESA_CAU_autosome.geno0.01.sd.pruned.fam
 #evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.evec
 #evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.eval
 #numoutevec: 10
@@ -835,9 +835,9 @@ nano AFA.par
 
 ###WITH AFA population merged 
 nano AFA.par
-#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.ped                                                 
-#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.map
-#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.fam
 #evecoutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.evec
 #evaloutname: /home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.eval
 #numoutevec: 10
@@ -848,9 +848,9 @@ nano AFA.par
 
 ###WITH HIS population merged 
 nano AFA.par
-#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.ped                                                 
-#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.map
-#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.fam
 #evecoutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.evec
 #evaloutname: /home/rachel/Plinkfiles/Revised_QC/HIS_hapmap.eval
 #numoutevec: 10
@@ -861,9 +861,9 @@ nano AFA.par
 
 ###WITH CAU population merged 
 nano AFA.par
-#genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped                                                 
-#snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
-#indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
+#genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.ped                                                 
+#snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.map
+#indivname: /home/rachel/Plinkfiles/Revised_QC/ MESA_AFA_autosome.geno0.01.sd.pruned.fam
 #evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.evec
 #evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_hapmap.eval
 #numoutevec: 10
@@ -882,4 +882,90 @@ smartpca -p HIS_hapmap.par
 
 smartpca -p CAU.par
 smartpca -p CAU_hapmap.par
+
+#In R
+#Unmerged 
+#AFA
+hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)select(V1,V3)
+colnames(hapmappopinfo) <- c("pop","IID")
+fam_AFA<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam') %>% select(V1,V2)
+colnames(fam_AFA) <- c("FID","IID")
+popinfo_AFA <- left_join(fam_AFA,hapmappopinfo,by="IID")
+popinfo_AFA <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'AFA',as.character(pop)))
+table(popinfo_AFA$pop)
+#ASN CEU YRI 
+#170 111 110
+
+pcs_AFAhap <- read.table("/home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.evec",skip=1)
+pcdf_AFAhap <- data.frame(popinfo,pcs_AFAhap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
+
+
+gwas_AFAhap <- filter(pcdf_AFAhap,pop=='AFA') %>% mutate(PATNO=IID)
+hm3_AFA <- filter(pcdf_AFAhap,grepl('NA',IID))
+table(gwas_AFAhap$pop)
+table(hm3$pop)
+
+
+hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)
+colnames(hapmappopinfo) <- c("pop","IID")
+fam_HIS<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam') %>% select(V1,V2)
+colnames(fam_HIS) <- c("FID","IID")
+popinfo_HIS <- left_join(fam_h,hapmappopinfo,by="IID")
+popinfo_HIS <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'HIS',as.character(pop)))
+table(popinfo$pop)
+
+pcs_HIShap <- read.table("/home/rachel/Plinkfiles/Revised_QC/his_merged_auto.evec",skip=1)
+pcdf_HIShap <- data.frame(popinfo,pcs_HIShap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
+
+gwas_HIShap <- filter(pcdf_HIShap,pop=='HIS') %>% mutate(PATNO=IID)
+hm3_HIS <- filter(pcdf_HIShap,grepl('NA',IID))
+table(gwas_HIShap$pop)
+table(hm3$pop)
+
+hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)
+colnames(hapmappopinfo) <- c("pop","IID")
+fam_CAU<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam') %>% select(V1,V2)
+colnames(fam_CAU) <- c("FID","IID")
+popinfo_CAU <- left_join(fam_h,hapmappopinfo,by="IID")
+popinfo_CAU <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'CAU',as.character(pop)))
+table(popinfo$pop)
+
+pcs_CAUhap <- read.table("/home/rachel/Plinkfiles/Revised_QC/cau_merged_auto.evec",skip=1)
+pcdf_CAUhap <- data.frame(popinfo,pcs_CAUhap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
+
+gwas_CAUhap <- filter(pcdf_CAUhap,pop=='HIS') %>% mutate(PATNO=IID)
+hm3_CAU <- filter(pcdf_CAUhap,grepl('NA',IID))
+table(gwas_CAUhap$pop)
+table(hm3$pop)
+
+hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)
+colnames(hapmappopinfo) <- c("pop","IID")
+fam_AFA<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam') %>% select(V1,V2)
+colnames(fam_AFA) <- c("FID","IID")
+popinfo_AFA <- left_join(fam_h,hapmappopinfo,by="IID")
+popinfo_AFA <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'CAU',as.character(pop)))
+table(popinfo$pop)
+
+pcs_AFAhap <- read.table("/home/rachel/Plinkfiles/Revised_QC/afa_merged_auto.evec",skip=1)
+pcdf_AFAhap <- data.frame(popinfo,pcs_CAUhap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
+
+gwas_AFAhap <- filter(pcdf_AFAhap,pop=='HIS') %>% mutate(PATNO=IID)
+hm3_AFA <- filter(pcdf_AFAhap,grepl('NA',IID))
+table(gwas_AFAhap$pop)
+table(hm3$pop)
+
+
+##calc proportion variance explained by each PC
+eval_hishap <- scan("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/his_merged_auto.eval")[1:10]
+round(eval_hishap/sum(eval_hishap),3)
+#pdf(file=my.dir %&% "MESA_PCA.pdf")
+ggplot() + geom_point(data=pcdf_hishap,aes(x=PC1,y=PC2,col=pop,shape=pop))+geom_point(data=hm3,aes(x=PC1,y=PC2,col=pop,shape=pop))+ theme_bw() + scale_colour_brewer(palette="Set1")
+
+ggplot() + geom_point(data=gwas,aes(x=PC1,y=PC3,col=pop,shape=pop))+geom_point(data=hm3,aes(x=PC1,y=PC3,col=pop,shape=pop))+ theme_bw() + scale_colour_brewer(palette="Set1")
+
+ggplot() + geom_point(data=gwas,aes(x=PC2,y=PC3,col=pop,shape=pop))+geom_point(data=hm3,aes(x=PC2,y=PC3,col=pop,shape=pop))+ theme_bw() + scale_colour_brewer(palette="Set1")
+#dev.off()
+
+
+
 
