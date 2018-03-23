@@ -806,7 +806,7 @@ nano AFA.par
 #control x --> yes --> keep file name --> AFA.par
 
 
-###WITH HIS population not merged 
+###WITH HIS population not merged   
 nano AFA.par
 #genotypename: /home/rachel/Plinkfiles/Revised_QC/ MESA_HIS_autosome.geno0.01.sd.pruned.ped                                                 
 #snpname: /home/rachel/Plinkfiles/Revised_QC/ MESA_HIS_autosome.geno0.01.sd.pruned.map
@@ -874,13 +874,13 @@ nano AFA.par
 
 
 #run PCA
-smartpca -p AFA.par
+smartpca -p AFA.par 
 smartpca -p AFA_hapmap.par 
 
 smartpca -p HIS.par
 smartpca -p HIS_hapmap.par
 
-smartpca -p CAU.par
+smartpca -p CAU.par 
 smartpca -p CAU_hapmap.par
 
 #In R
