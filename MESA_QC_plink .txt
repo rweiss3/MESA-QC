@@ -835,12 +835,11 @@ nano AFA.par
 
 ###WITH AFA population merged 
 nano AFA.par
-
-genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.ped
-snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam
-evecoutname: /home/rachel/Plinkfiles/Revised_QC/afa_merged_auto.evec
-evaloutname: /home/rachel/Plinkfiles/Revised_QC/afa_merged_auto.eval
+genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.ped
+snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.map
+indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.fam
+evecoutname: /home/rachel/Plinkfiles/Revised_QC/afa_mergedHAPMAP_auto.evec
+evaloutname: /home/rachel/Plinkfiles/Revised_QC/afa_mergedHAPMAP_auto.eval
 numoutevec: 10
 numoutlieriter: 0
 numoutlierevec: 2
@@ -849,11 +848,11 @@ outliersigmathresh: 6
 
 ###WITH HIS population merged 
 nano AFA.par
-genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.ped
-snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam
-evecoutname: /home/rachel/Plinkfiles/Revised_QC/his_merged_auto.evec
-evaloutname: /home/rachel/Plinkfiles/Revised_QC/his_merged_auto.eval
+genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_mergedHAPMAP0.05.ped
+snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_mergedHAPMAP0.05.map
+indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_mergedHAPMAP0.05.fam
+evecoutname: /home/rachel/Plinkfiles/Revised_QC/his_mergedHAPMAP_auto.evec
+evaloutname: /home/rachel/Plinkfiles/Revised_QC/his_mergedHAPMAP_auto.eval
 numoutevec: 10
 numoutlieriter: 0
 numoutlierevec: 2
@@ -862,11 +861,11 @@ outliersigmathresh: 6
 
 ###WITH CAU population merged 
 nano AFA.par
-genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.ped
-snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
-evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_merged_auto.evec
-evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_merged_auto.eval
+genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_mergedHAPMAP0.05.ped
+snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_mergedHAPMAP0.05.map
+indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_mergedHAPMAP0.05.fam
+evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_mergedHAPMAP_auto.evec
+evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_mergedHAPMAP_auto.eval
 numoutevec: 10
 numoutlieriter: 0
 numoutlierevec: 2
