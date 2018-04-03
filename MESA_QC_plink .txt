@@ -940,7 +940,7 @@ table(hm3$pop)
 
 hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)
 colnames(hapmappopinfo) <- c("pop","IID")
-fam_AFA<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam') %>% select(V1,V2)
+fam_AFA<- read.table("/home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam") %>% select(V1,V2)
 colnames(fam_AFA) <- c("FID","IID")
 popinfo_AFA <- left_join(fam_h,hapmappopinfo,by="IID")
 popinfo_AFA <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'CAU',as.character(pop)))
