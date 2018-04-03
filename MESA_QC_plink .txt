@@ -850,7 +850,7 @@ outliersigmathresh: 6
 nano AFA.par
 genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_mergedHAPMAP0.05.ped
 snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_mergedHAPMAP0.05.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_mergedHAPMAP0.05.fam
+indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam
 evecoutname: /home/rachel/Plinkfiles/Revised_QC/his_mergedHAPMAP_auto.evec
 evaloutname: /home/rachel/Plinkfiles/Revised_QC/his_mergedHAPMAP_auto.eval
 numoutevec: 10
@@ -863,7 +863,7 @@ outliersigmathresh: 6
 nano AFA.par
 genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_mergedHAPMAP0.05.ped
 snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_mergedHAPMAP0.05.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_mergedHAPMAP0.05.fam
+indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam
 evecoutname: /home/rachel/Plinkfiles/Revised_QC/CAU_mergedHAPMAP_auto.evec
 evaloutname: /home/rachel/Plinkfiles/Revised_QC/CAU_mergedHAPMAP_auto.eval
 numoutevec: 10
@@ -892,12 +892,12 @@ fam_AFA<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.
 colnames(fam_AFA) <- c("FID","IID")
 popinfo_AFA <- left_join(fam_AFA,hapmappopinfo,by="IID")
 popinfo_AFA <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'AFA',as.character(pop)))
-table(popinfo_AFA$pop)
+table(popinfo_AFA)
 #ASN CEU YRI 
 #170 111 110
 
 pcs_AFAhap <- read.table("/home/rachel/Plinkfiles/Revised_QC/AFA_hapmap.evec",skip=1)
-pcdf_AFAhap <- data.frame(popinfo,pcs_AFAhap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
+pcdf_AFAhap <- data.frame(popinfo_AFA,pcs_AFAhap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
 
 
 gwas_AFAhap <- filter(pcdf_AFAhap,pop=='AFA') %>% mutate(PATNO=IID)
@@ -905,14 +905,14 @@ hm3_AFA <- filter(pcdf_AFAhap,grepl('NA',IID))
 table(gwas_AFAhap$pop)
 table(hm3$pop)
 
-
+#HIS
 hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)
 colnames(hapmappopinfo) <- c("pop","IID")
 fam_HIS<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_HIS_merged_hapmap.4pca.fam') %>% select(V1,V2)
 colnames(fam_HIS) <- c("FID","IID")
 popinfo_HIS <- left_join(fam_h,hapmappopinfo,by="IID")
 popinfo_HIS <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'HIS',as.character(pop)))
-table(popinfo$pop)
+table(popinfo_HIS)
 
 pcs_HIShap <- read.table("/home/rachel/Plinkfiles/Revised_QC/his_merged_auto.evec",skip=1)
 pcdf_HIShap <- data.frame(popinfo,pcs_HIShap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
@@ -922,13 +922,14 @@ hm3_HIS <- filter(pcdf_HIShap,grepl('NA',IID))
 table(gwas_HIShap$pop)
 table(hm3$pop)
 
+#CAU
 hapmappopinfo <- read.table("/home/lauren/MESA_dbGaP_55081/all_mesa_merged/hapmap_hg19/pop_HM3_hg19_forPCA.txt") %>% select(V1,V3)
 colnames(hapmappopinfo) <- c("pop","IID")
 fam_CAU<- read.table('/home/rachel/Plinkfiles/Revised_QC/MESA_CAU_merged_hapmap.4pca.fam') %>% select(V1,V2)
 colnames(fam_CAU) <- c("FID","IID")
 popinfo_CAU <- left_join(fam_h,hapmappopinfo,by="IID")
-popinfo_CAU <- mutate(popinfo, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'CAU',as.character(pop)))
-table(popinfo$pop)
+popinfo_CAU <- mutate(popinfo_CAU, pop=ifelse(grepl('T',IID),'Norway',as.character(pop))) %>% mutate(pop=ifelse(is.na(pop),'CAU',as.character(pop)))
+table(popinfo_CAU)
 
 pcs_CAUhap <- read.table("/home/rachel/Plinkfiles/Revised_QC/cau_merged_auto.evec",skip=1)
 pcdf_CAUhap <- data.frame(popinfo,pcs_CAUhap[,2:11]) %>% rename(PC1=V2,PC2=V3,PC3=V4,PC4=V5,PC5=V6,PC6=V7,PC7=V8,PC8=V9,PC9=V10,PC10=V11)
