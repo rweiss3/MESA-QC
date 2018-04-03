@@ -837,7 +837,7 @@ nano AFA.par
 nano AFA.par
 genotypename: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.ped
 snpname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.map
-indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.fam
+indivname: /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_merged_hapmap.4pca.fam
 evecoutname: /home/rachel/Plinkfiles/Revised_QC/afa_mergedHAPMAP_auto.evec
 evaloutname: /home/rachel/Plinkfiles/Revised_QC/afa_mergedHAPMAP_auto.eval
 numoutevec: 10
