@@ -1,1 +1,9 @@
-
+#convert VCF files of Time to diabetes to plink format 
+#use dosage to plink 
+# afa data in /home/lauren/imputation_mesa_2/afa_imp/UMich_dosages
+# his data in /home/lauren/imputation_mesa_2/his_imp/UMich_dosages
+# cau data in /home/lauren/imputation_mesa_2/cau_imp/UMich_dosages
+# has all individuals chr10.maf0.01.r20.8noambig.dosage.txt.gz
+# has individuals with expression *chr10dosage_w_expression.txt.gz
+# samples.txt contains all AFA individuals 
+# samples_AFA.txt has individuals with expression 
