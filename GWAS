@@ -8,6 +8,7 @@
 # has individuals with expression *chr10dosage_w_expression.txt.gz
 # samples.txt contains all AFA individuals 
 # samples_AFA.txt has individuals with expression 
-
+#New directory created 
+mkdir -p MESAimputed #(within Plinkfiles/Revised_QC)
 
 plink2 --import-dosage /home/lauren/imputation_mesa_2/afa_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.fam
