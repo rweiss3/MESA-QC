@@ -37,13 +37,42 @@
    Convert dosage files to bed/bim/fam files using plink2:
     ##In dir /home/rachel/Plinkfiles/Revised_QC/MESAimputed
     For AFA chr 1-22:
-    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/afa_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_AFA_merged_autosome.geno0.01.sd.4pca.fam;done
-    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/his_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_HIS_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_HIS_merged_autosome.geno0.01.sd.4pca.fam
-    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/cau_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_CAU_merged_autosome.geno0.01.sd.4pca.fam
-   
+    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/afa_imp/UMich_dosages/chr${i}.maf0.01.r20.8noambig.dosage.txt.gz noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESA_AFA_merged_autosome.geno0.01.sd.4pca.fam;done
+    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/his_imp/UMich_dosages/chr${i}.maf0.01.r20.8noambig.dosage.txt.gz noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_HIS_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESA_HIS_merged_autosome.geno0.01.sd.4pca.fam;done
+    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/cau_imp/UMich_dosages/chr${i}.maf0.01.r20.8noambig.dosage.txt.gz noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_CAU_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESA_CAU_merged_autosome.geno0.01.sd.4pca.fam;done 
    
   Merge chr within pop
     For AFA: 22 files to 1 files
+    plink -bfile AFAchr1 -mergelist
+    nano AFA_merge_list.txt
+       chr2.maf0.01.r20.8noamig.dosage.bed chr2.maf0.01.r20.8noamig.dosage.bam chr2.maf0.01.r20.8noamig.dosage.fam 
+       chr3.maf0.01.r20.8noamig.dosage.bed chr3.maf0.01.r20.8noamig.dosage.bam chr3.maf0.01.r20.8noamig.dosag.fam
+       chr4.maf0.01.r20.8noamig.dosage.bed chr4.maf0.01.r20.8noamig.dosage.bam chr4.maf0.01.r20.8noamig.dosage.fam
+       chr5.maf0.01.r20.8noamig.dosage.bed chr5.maf0.01.r20.8noamig.dosage.bam chr5.maf0.01.r20.8noamig.dosage.fam
+       chr6.maf0.01.r20.8noamig.dosage.bed chr6.maf0.01.r20.8noamig.dosage.bam chr6.maf0.01.r20.8noamig.dosage.fam
+       chr7.maf0.01.r20.8noamig.dosage.bed chr7.maf0.01.r20.8noamig.dosage.bam chr7.maf0.01.r20.8noamig.dosage.fam
+       chr8.maf0.01.r20.8noamig.dosage.bed chr8.maf0.01.r20.8noamig.dosage.bam chr8.maf0.01.r20.8noamig.dosage.fam
+       chr9.maf0.01.r20.8noamig.dosage.bed chr9.maf0.01.r20.8noamig.dosage.bam chr9.maf0.01.r20.8noamig.dosage.fam
+       chr10.maf0.01.r20.8noamig.dosage.bed chr10.maf0.01.r20.8noamig.dosage.bam chr10.maf0.01.r20.8noamig.dosage.fam
+       chr11.maf0.01.r20.8noamig.dosage.bed chr11.maf0.01.r20.8noamig.dosage.bam chr11.maf0.01.r20.8noamig.dosage.fam
+       chr12.maf0.01.r20.8noamig.dosage.bed chr12.maf0.01.r20.8noamig.dosage.bam chr12.maf0.01.r20.8noamig.dosage.fam
+       chr13.maf0.01.r20.8noamig.dosage.bed chr13.maf0.01.r20.8noamig.dosage.bam chr13.maf0.01.r20.8noamig.dosage.fam
+       chr14.maf0.01.r20.8noamig.dosage.bed chr14.maf0.01.r20.8noamig.dosage.bam chr14.maf0.01.r20.8noamig.dosage.fam
+       chr15.maf0.01.r20.8noamig.dosage.bed chr15.maf0.01.r20.8noamig.dosage.bam chr15.maf0.01.r20.8noamig.dosage.fam
+       chr16.maf0.01.r20.8noamig.dosage.bed chr16.maf0.01.r20.8noamig.dosage.bam chr16.maf0.01.r20.8noamig.dosage.fam
+       chr17.maf0.01.r20.8noamig.dosage.bed chr17.maf0.01.r20.8noamig.dosage.bam chr17.maf0.01.r20.8noamig.dosage.fam
+       chr18.maf0.01.r20.8noamig.dosage.bed chr18.maf0.01.r20.8noamig.dosage.bam chr18.maf0.01.r20.8noamig.dosage.fam
+       chr19.maf0.01.r20.8noamig.dosage.bed chr19.maf0.01.r20.8noamig.dosage.bam chr19.maf0.01.r20.8noamig.dosage.fam
+       chr20.maf0.01.r20.8noamig.dosage.bed chr20.maf0.01.r20.8noamig.dosage.bam chr20.maf0.01.r20.8noamig.dosage.fam
+       chr21.maf0.01.r20.8noamig.dosage.bed chr21.maf0.01.r20.8noamig.dosage.bam chr21.maf0.01.r20.8noamig.dosage.fam
+       chr22.maf0.01.r20.8noamig.dosage.bed chr22.maf0.01.r20.8noamig.dosage.bam chr22.maf0.01.r20.8noamig.dosage.fam 
+     plink -bfile AFAchr1 -AFA_merge_list.txt
+     
+     nano HIS_merge_list.txt
+     plink -bfile HISchr1 -HIS_merge_list.txt
+     
+     nano CAU_mere_list.txt
+     plink -bfile CAUchr1 -CAU_merge_list.txt
     
    Merge between pops:
     3 pops to 1 total group
