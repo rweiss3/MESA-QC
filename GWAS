@@ -41,3 +41,9 @@
     for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/his_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_HIS_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_HIS_merged_autosome.geno0.01.sd.4pca.fam
     for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/cau_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_CAU_merged_autosome.geno0.01.sd.4pca.fam
    
+   
+  Merge chr within pop
+    For AFA: 22 files to 1 files
+    
+   Merge between pops:
+    3 pops to 1 total group
