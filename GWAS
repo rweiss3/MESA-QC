@@ -8,7 +8,36 @@
 # has individuals with expression *chr10dosage_w_expression.txt.gz
 # samples.txt contains all AFA individuals 
 # samples_AFA.txt has individuals with expression 
-#New directory created 
-mkdir -p MESAimputed #(within Plinkfiles/Revised_QC)
 
-plink2 --import-dosage /home/lauren/imputation_mesa_2/afa_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/Revised_QC/MESA_AFA_mergedHAPMAP0.05.fam
+    Individual chromosomes:
+        chr1.maf0.01.r20.8noamig.dosage.txt.gz
+        chr2.maf0.01.r20.8noamig.dosage.txt.gz
+        chr3.maf0.01.r20.8noamig.dosage.txt.gz
+        chr4.maf0.01.r20.8noamig.dosage.txt.gz
+        chr5.maf0.01.r20.8noamig.dosage.txt.gz
+        chr6.maf0.01.r20.8noamig.dosage.txt.gz
+        chr7.maf0.01.r20.8noamig.dosage.txt.gz
+        chr8.maf0.01.r20.8noamig.dosage.txt.gz
+        chr9.maf0.01.r20.8noamig.dosage.txt.gz
+        chr10.maf0.01.r20.8noamig.dosage.txt.gz
+        chr11.maf0.01.r20.8noamig.dosage.txt.gz
+        chr12.maf0.01.r20.8noamig.dosage.txt.gz
+        chr13.maf0.01.r20.8noamig.dosage.txt.gz
+        chr14.maf0.01.r20.8noamig.dosage.txt.gz
+        chr15.maf0.01.r20.8noamig.dosage.txt.gz
+        chr16.maf0.01.r20.8noamig.dosage.txt.gz
+        chr17.maf0.01.r20.8noamig.dosage.txt.gz
+        chr18.maf0.01.r20.8noamig.dosage.txt.gz
+        chr19.maf0.01.r20.8noamig.dosage.txt.gz
+        chr20.maf0.01.r20.8noamig.dosage.txt.gz
+        chr21.maf0.01.r20.8noamig.dosage.txt.gz
+        chr22.maf0.01.r20.8noamig.dosage.txt.gz
+    ##use maf and r^2 files - want to use all individuals
+     
+   Convert dosage files to bed/bim/fam files using plink2:
+    ##In dir /home/rachel/Plinkfiles/Revised_QC/MESAimputed
+    For AFA chr 1-22:
+    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/afa_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_AFA_merged_autosome.geno0.01.sd.4pca.fam;done
+    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/his_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_HIS_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_HIS_merged_autosome.geno0.01.sd.4pca.fam
+    for i in {1..22};do plink2 --import-dosage /home/lauren/imputation_mesa_2/cau_imp/UMich_dosages/chr${i}.maf0.01.r20.8noamig.dosage.txt.gz/ noheader skip0=1 skip1=1 chr-col-num=1 pos-col-num=3 format=1 --make-bed --out MESA_AFA_all_imputed.chr${i}.geno --fam /home/rachel/Plinkfiles/MESAfiles/MESA_CAU_merged_autosome.geno0.01.sd.4pca.fam
+   
