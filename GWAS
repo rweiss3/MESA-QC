@@ -43,36 +43,89 @@
    
   Merge chromosomes within populations 
     For AFA: 22 files to 1 files
-    plink -bfile AFAchr1 -mergelist
     nano AFA_merge_list.txt
-       chr2.maf0.01.r20.8noamig.dosage.bed chr2.maf0.01.r20.8noamig.dosage.bam chr2.maf0.01.r20.8noamig.dosage.fam 
-       chr3.maf0.01.r20.8noamig.dosage.bed chr3.maf0.01.r20.8noamig.dosage.bam chr3.maf0.01.r20.8noamig.dosag.fam
-       chr4.maf0.01.r20.8noamig.dosage.bed chr4.maf0.01.r20.8noamig.dosage.bam chr4.maf0.01.r20.8noamig.dosage.fam
-       chr5.maf0.01.r20.8noamig.dosage.bed chr5.maf0.01.r20.8noamig.dosage.bam chr5.maf0.01.r20.8noamig.dosage.fam
-       chr6.maf0.01.r20.8noamig.dosage.bed chr6.maf0.01.r20.8noamig.dosage.bam chr6.maf0.01.r20.8noamig.dosage.fam
-       chr7.maf0.01.r20.8noamig.dosage.bed chr7.maf0.01.r20.8noamig.dosage.bam chr7.maf0.01.r20.8noamig.dosage.fam
-       chr8.maf0.01.r20.8noamig.dosage.bed chr8.maf0.01.r20.8noamig.dosage.bam chr8.maf0.01.r20.8noamig.dosage.fam
-       chr9.maf0.01.r20.8noamig.dosage.bed chr9.maf0.01.r20.8noamig.dosage.bam chr9.maf0.01.r20.8noamig.dosage.fam
-       chr10.maf0.01.r20.8noamig.dosage.bed chr10.maf0.01.r20.8noamig.dosage.bam chr10.maf0.01.r20.8noamig.dosage.fam
-       chr11.maf0.01.r20.8noamig.dosage.bed chr11.maf0.01.r20.8noamig.dosage.bam chr11.maf0.01.r20.8noamig.dosage.fam
-       chr12.maf0.01.r20.8noamig.dosage.bed chr12.maf0.01.r20.8noamig.dosage.bam chr12.maf0.01.r20.8noamig.dosage.fam
-       chr13.maf0.01.r20.8noamig.dosage.bed chr13.maf0.01.r20.8noamig.dosage.bam chr13.maf0.01.r20.8noamig.dosage.fam
-       chr14.maf0.01.r20.8noamig.dosage.bed chr14.maf0.01.r20.8noamig.dosage.bam chr14.maf0.01.r20.8noamig.dosage.fam
-       chr15.maf0.01.r20.8noamig.dosage.bed chr15.maf0.01.r20.8noamig.dosage.bam chr15.maf0.01.r20.8noamig.dosage.fam
-       chr16.maf0.01.r20.8noamig.dosage.bed chr16.maf0.01.r20.8noamig.dosage.bam chr16.maf0.01.r20.8noamig.dosage.fam
-       chr17.maf0.01.r20.8noamig.dosage.bed chr17.maf0.01.r20.8noamig.dosage.bam chr17.maf0.01.r20.8noamig.dosage.fam
-       chr18.maf0.01.r20.8noamig.dosage.bed chr18.maf0.01.r20.8noamig.dosage.bam chr18.maf0.01.r20.8noamig.dosage.fam
-       chr19.maf0.01.r20.8noamig.dosage.bed chr19.maf0.01.r20.8noamig.dosage.bam chr19.maf0.01.r20.8noamig.dosage.fam
-       chr20.maf0.01.r20.8noamig.dosage.bed chr20.maf0.01.r20.8noamig.dosage.bam chr20.maf0.01.r20.8noamig.dosage.fam
-       chr21.maf0.01.r20.8noamig.dosage.bed chr21.maf0.01.r20.8noamig.dosage.bam chr21.maf0.01.r20.8noamig.dosage.fam
-       chr22.maf0.01.r20.8noamig.dosage.bed chr22.maf0.01.r20.8noamig.dosage.bam chr22.maf0.01.r20.8noamig.dosage.fam 
-     plink -bfile AFAchr1 -AFA_merge_list.txt
-     
+       MESA_AFA_all_imputed.chr2.geno.bed MESA_AFA_all_imputed.chr2.geno.bim MESA_AFA_all_imputed.chr2.geno.fam
+       MESA_AFA_all_imputed.chr3.geno.bed MESA_AFA_all_imputed.chr3.geno.bim MESA_AFA_all_imputed.chr3.geno.fam
+       MESA_AFA_all_imputed.chr4.geno.bed MESA_AFA_all_imputed.chr4.geno.bim MESA_AFA_all_imputed.chr4.geno.fam
+       MESA_AFA_all_imputed.chr5.geno.bed MESA_AFA_all_imputed.chr5.geno.bim MESA_AFA_all_imputed.chr5.geno.fam
+       MESA_AFA_all_imputed.chr6.geno.bed MESA_AFA_all_imputed.chr6.geno.bim MESA_AFA_all_imputed.chr6.geno.fam
+       MESA_AFA_all_imputed.chr7.geno.bed MESA_AFA_all_imputed.chr7.geno.bim MESA_AFA_all_imputed.chr7.geno.fam
+       MESA_AFA_all_imputed.chr8.geno.bed MESA_AFA_all_imputed.chr8.geno.bim MESA_AFA_all_imputed.chr8.geno.fam
+       MESA_AFA_all_imputed.chr9.geno.bed MESA_AFA_all_imputed.chr9.geno.bim MESA_AFA_all_imputed.chr9.geno.fam
+       MESA_AFA_all_imputed.chr10.geno.bed MESA_AFA_all_imputed.chr10.geno.bim MESA_AFA_all_imputed.chr10.geno.fam
+       MESA_AFA_all_imputed.chr11.geno.bed MESA_AFA_all_imputed.chr11.geno.bim MESA_AFA_all_imputed.chr11.geno.fam
+       MESA_AFA_all_imputed.chr12.geno.bed MESA_AFA_all_imputed.chr12.geno.bim MESA_AFA_all_imputed.chr12.geno.fam
+       MESA_AFA_all_imputed.chr13.geno.bed MESA_AFA_all_imputed.chr13.geno.bim MESA_AFA_all_imputed.chr13.geno.fam
+       MESA_AFA_all_imputed.chr14.geno.bed MESA_AFA_all_imputed.chr14.geno.bim MESA_AFA_all_imputed.chr14.geno.fam
+       MESA_AFA_all_imputed.chr15.geno.bed MESA_AFA_all_imputed.chr15.geno.bim MESA_AFA_all_imputed.chr15.geno.fam
+       MESA_AFA_all_imputed.chr16.geno.bed MESA_AFA_all_imputed.chr16.geno.bim MESA_AFA_all_imputed.chr16.geno.fam
+       MESA_AFA_all_imputed.chr17.geno.bed MESA_AFA_all_imputed.chr17.geno.bim MESA_AFA_all_imputed.chr17.geno.fam
+       MESA_AFA_all_imputed.chr18.geno.bed MESA_AFA_all_imputed.chr18.geno.bim MESA_AFA_all_imputed.chr18.geno.fam
+       MESA_AFA_all_imputed.chr19.geno.bed MESA_AFA_all_imputed.chr19.geno.bim MESA_AFA_all_imputed.chr19.geno.fam
+       MESA_AFA_all_imputed.chr20.geno.bed MESA_AFA_all_imputed.chr20.geno.bim MESA_AFA_all_imputed.chr20.geno.fam
+       
+    plink --file fA --merge-list allfiles.txt --make-bed --out mynewdata
+    plink --bfile MESA_AFA_all_imputed.chr1.geno --merge-list AFA_merge_list.txt --make-bed --out AFA_chr_merged 
+    
+ #Convert Plink to VCF 
+ plink --bfile binary_fileset --recode vcf-iid --out new_vcf 
+ #created loop for chromsomes 1-22 
+ for i in {1..22};do plink --bfile MESA_AFA_all_imputed.chr1.geno --recode vcf-iid --out MESA_AFA_all_imputed.chri.geno_vcf;done
+
+   
      nano HIS_merge_list.txt
-     plink -bfile HISchr1 -HIS_merge_list.txt
+       MESA_HIS_all_imputed.chr2.geno.bed MESA_HIS_all_imputed.chr2.geno.bim MESA_HIS_all_imputed.chr2.geno.fam
+       MESA_HIS_all_imputed.chr3.geno.bed MESA_HIS_all_imputed.chr3.geno.bim MESA_HIS_all_imputed.chr3.geno.fam
+       MESA_HIS_all_imputed.chr4.geno.bed MESA_HIS_all_imputed.chr4.geno.bim MESA_HIS_all_imputed.chr4.geno.fam
+       MESA_HIS_all_imputed.chr5.geno.bed MESA_HIS_all_imputed.chr5.geno.bim MESA_HIS_all_imputed.chr5.geno.fam
+       MESA_HIS_all_imputed.chr6.geno.bed MESA_HIS_all_imputed.chr6.geno.bim MESA_HIS_all_imputed.chr6.geno.fam
+       MESA_HIS_all_imputed.chr7.geno.bed MESA_HIS_all_imputed.chr7.geno.bim MESA_HIS_all_imputed.chr7.geno.fam
+       MESA_HIS_all_imputed.chr8.geno.bed MESA_HIS_all_imputed.chr8.geno.bim MESA_HIS_all_imputed.chr8.geno.fam
+       MESA_HIS_all_imputed.chr9.geno.bed MESA_HIS_all_imputed.chr9.geno.bim MESA_HIS_all_imputed.chr9.geno.fam
+       MESA_HIS_all_imputed.chr10.geno.bed MESA_HIS_all_imputed.chr10.geno.bim MESA_HIS_all_imputed.chr10.geno.fam
+       MESA_HIS_all_imputed.chr11.geno.bed MESA_HIS_all_imputed.chr11.geno.bim MESA_HIS_all_imputed.chr11.geno.fam
+       MESA_HIS_all_imputed.chr12.geno.bed MESA_HIS_all_imputed.chr12.geno.bim MESA_HIS_all_imputed.chr12.geno.fam
+       MESA_HIS_all_imputed.chr13.geno.bed MESA_HIS_all_imputed.chr13.geno.bim MESA_HIS_all_imputed.chr13.geno.fam
+       MESA_HIS_all_imputed.chr14.geno.bed MESA_HIS_all_imputed.chr14.geno.bim MESA_HIS_all_imputed.chr14.geno.fam
+       MESA_HIS_all_imputed.chr15.geno.bed MESA_HIS_all_imputed.chr15.geno.bim MESA_HIS_all_imputed.chr15.geno.fam
+       MESA_HIS_all_imputed.chr16.geno.bed MESA_HIS_all_imputed.chr16.geno.bim MESA_HIS_all_imputed.chr16.geno.fam
+       MESA_HIS_all_imputed.chr17.geno.bed MESA_HIS_all_imputed.chr17.geno.bim MESA_HIS_all_imputed.chr17.geno.fam
+       MESA_HIS_all_imputed.chr18.geno.bed MESA_HIS_all_imputed.chr18.geno.bim MESA_HIS_all_imputed.chr18.geno.fam
+       MESA_HIS_all_imputed.chr19.geno.bed MESA_HIS_all_imputed.chr19.geno.bim MESA_HIS_all_imputed.chr19.geno.fam
+       MESA_HIS_all_imputed.chr20.geno.bed MESA_HIS_all_imputed.chr20.geno.bim MESA_HIS_all_imputed.chr20.geno.fam
      
-     nano CAU_mere_list.txt
-     plink -bfile CAUchr1 -CAU_merge_list.txt
+    plink --bfile MESA_HIS_all_imputed.chr1.geno --merge-list HIS_merge_list.txt --make-bed --out HIS_chr_merged 
+ #Convert Plink to VCF 
+ plink --bfile binary_fileset --recode vcf-iid --out new_vcf 
+ #created loop for chromsomes 1-22 
+ for i in {1..22};do plink --bfile MESA_HIS_all_imputed.chr1.geno --recode vcf-iid --out MESA_HIS_all_imputed.chri.geno_vcf;done
+     
+nano CAU_merge_list.txt
+    MESA_CAU_all_imputed.chr2.geno.bed MESA_CAU_all_imputed.chr2.geno.bim MESA_CAU_all_imputed.chr2.geno.fam
+    MESA_CAU_all_imputed.chr3.geno.bed MESA_CAU_all_imputed.chr3.geno.bim MESA_CAU_all_imputed.chr3.geno.fam
+    MESA_CAU_all_imputed.chr4.geno.bed MESA_CAU_all_imputed.chr4.geno.bim MESA_CAU_all_imputed.chr4.geno.fam
+    MESA_CAU_all_imputed.chr5.geno.bed MESA_CAU_all_imputed.chr5.geno.bim MESA_CAU_all_imputed.chr5.geno.fam
+    MESA_CAU_all_imputed.chr6.geno.bed MESA_CAU_all_imputed.chr6.geno.bim MESA_CAU_all_imputed.chr6.geno.fam
+    MESA_CAU_all_imputed.chr7.geno.bed MESA_CAU_all_imputed.chr7.geno.bim MESA_CAU_all_imputed.chr7.geno.fam
+    MESA_CAU_all_imputed.chr8.geno.bed MESA_CAU_all_imputed.chr8.geno.bim MESA_CAU_all_imputed.chr8.geno.fam
+    MESA_CAU_all_imputed.chr9.geno.bed MESA_CAU_all_imputed.chr9.geno.bim MESA_CAU_all_imputed.chr9.geno.fam
+    MESA_CAU_all_imputed.chr10.geno.bed MESA_CAU_all_imputed.chr10.geno.bim MESA_CAU_all_imputed.chr10.geno.fam
+    MESA_CAU_all_imputed.chr11.geno.bed MESA_CAU_all_imputed.chr11.geno.bim MESA_CAU_all_imputed.chr11.geno.fam
+    MESA_CAU_all_imputed.chr12.geno.bed MESA_CAU_all_imputed.chr12.geno.bim MESA_CAU_all_imputed.chr12.geno.fam
+    MESA_CAU_all_imputed.chr13.geno.bed MESA_CAU_all_imputed.chr13.geno.bim MESA_CAU_all_imputed.chr13.geno.fam
+    MESA_CAU_all_imputed.chr14.geno.bed MESA_CAU_all_imputed.chr14.geno.bim MESA_CAU_all_imputed.chr14.geno.fam
+    MESA_CAU_all_imputed.chr15.geno.bed MESA_CAU_all_imputed.chr15.geno.bim MESA_CAU_all_imputed.chr15.geno.fam
+    MESA_CAU_all_imputed.chr16.geno.bed MESA_CAU_all_imputed.chr16.geno.bim MESA_CAU_all_imputed.chr16.geno.fam
+    MESA_CAU_all_imputed.chr17.geno.bed MESA_CAU_all_imputed.chr17.geno.bim MESA_CAU_all_imputed.chr17.geno.fam
+    MESA_CAU_all_imputed.chr18.geno.bed MESA_CAU_all_imputed.chr18.geno.bim MESA_CAU_all_imputed.chr18.geno.fam
+    MESA_CAU_all_imputed.chr19.geno.bed MESA_CAU_all_imputed.chr19.geno.bim MESA_CAU_all_imputed.chr19.geno.fam
+    MESA_CAU_all_imputed.chr20.geno.bed MESA_CAU_all_imputed.chr20.geno.bim MESA_CAU_all_imputed.chr20.geno.fam
+     
+    plink --bfile MESA_CAU_all_imputed.chr1.geno --merge-list HIS_merge_list.txt --make-bed --out CAU_chr_merged 
+ #Convert Plink to VCF 
+ plink --bfile binary_fileset --recode vcf-iid --out new_vcf 
+ #created loop for chromsomes 1-22 
+ for i in {1..22};do plink --bfile MESA_CAU_all_imputed.chr1.geno --recode vcf-iid --out MESA_CAU_all_imputed.chri.geno_vcf;done
     
    Merge between pops:
     3 pops to 1 total group
