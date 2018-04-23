@@ -121,7 +121,7 @@ nano CAU_merge_list.txt
     MESA_CAU_all_imputed.chr19.geno.bed MESA_CAU_all_imputed.chr19.geno.bim MESA_CAU_all_imputed.chr19.geno.fam
     MESA_CAU_all_imputed.chr20.geno.bed MESA_CAU_all_imputed.chr20.geno.bim MESA_CAU_all_imputed.chr20.geno.fam
      
-    plink --bfile MESA_CAU_all_imputed.chr1.geno --merge-list HIS_merge_list.txt --make-bed --out CAU_chr_merged 
+    plink --bfile MESA_CAU_all_imputed.chr1.geno --merge-list CAU_merge_list.txt --make-bed --out CAU_chr_merged 
  #Convert Plink to VCF 
  plink --bfile binary_fileset --recode vcf-iid --out new_vcf 
  #created loop for chromsomes 1-22 
