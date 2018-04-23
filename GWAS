@@ -1,3 +1,5 @@
+cd Plinkfiles/Revised_QC/MESAimputed
+
 #convert VCF files of Time to diabetes to plink format 
 #use dosage to plink
 #Genotype files after imputation and filtering with maf .01 and r^2 .8 
